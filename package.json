@@ -1,7 +1,7 @@
 {
-    "name": "angular-skeleton",
+    "name": "angular-bug-tracker-app",
     "version": "1.0.0",
-    "description": "Angular skeleton project",
+    "description": "Angular bug tracker app",
     "scripts": {
         "start": "tsc && concurrently \"tsc -w\" \"lite-server\" ",
         "lite": "lite-server",
