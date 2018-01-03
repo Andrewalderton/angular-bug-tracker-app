@@ -18,6 +18,7 @@
                     <th>Description</th>
                     <th>Logged By</th>
                     <th>Date</th>
+                    <th>Delete</th>
                 </tr>
             </thead>
             <tbody>
@@ -28,6 +29,7 @@
                     <td>{{bug.description}}</td>
                     <td>{{bug.createdBy}}</td>
                     <td>{{bug.createdDate | date }}</td>
+                    <td><i class="fa fa-trash-o" aria-hidden="true" (click)="deleteBug(bug, $event)"></i></td>
                 </tr>
             </tbody>
         </table>

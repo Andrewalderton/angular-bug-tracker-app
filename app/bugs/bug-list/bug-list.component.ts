@@ -39,4 +39,11 @@ export class BugListComponent implements OnInit {
                 console.error("Unable to get updated bug - ", err);
             });
     }
+
+    deleteBug(bug, $event) {
+        $event.stopPropagation();
+        this.bugService.deleteBug(bug);
+        const bugIndex = this.bugs.map(index => index.id).indexOf(bug['id']);
+        this.bugs.splice(bugIndex, 1);
+    }
 }

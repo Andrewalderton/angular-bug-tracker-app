@@ -38,6 +38,12 @@ var BugListComponent = (function () {
             console.error("Unable to get updated bug - ", err);
         });
     };
+    BugListComponent.prototype.deleteBug = function (bug, $event) {
+        $event.stopPropagation();
+        this.bugService.deleteBug(bug);
+        var bugIndex = this.bugs.map(function (index) { return index.id; }).indexOf(bug['id']);
+        this.bugs.splice(bugIndex, 1);
+    };
     BugListComponent = __decorate([
         core_1.Component({
             moduleId: module.id,

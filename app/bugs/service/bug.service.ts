@@ -58,4 +58,10 @@ export class BugService {
         bug.updatedDate = Date.now();
         currentBugRef.update(bug);
     }
+
+    deleteBug(bug: Bug) {
+        const currentBug = this.bugsDbRef.child(bug.id);
+        currentBug.remove();
+    }
+
 }
